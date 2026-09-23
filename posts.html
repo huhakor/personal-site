@@ -33,17 +33,17 @@
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="filter-row">
-      <button class="filter-pill active">전체</button>
-      <button class="filter-pill">산업분석</button>
-      <button class="filter-pill">정책연구</button>
-      <button class="filter-pill">AI</button>
-      <button class="filter-pill">데이터</button>
-      <button class="filter-pill">커리어</button>
-      <button class="filter-pill">철학</button>
+      <button class="filter-pill active" data-filter="전체">전체</button>
+      <button class="filter-pill" data-filter="산업분석">산업분석</button>
+      <button class="filter-pill" data-filter="정책연구">정책연구</button>
+      <button class="filter-pill" data-filter="AI">AI</button>
+      <button class="filter-pill" data-filter="데이터">데이터</button>
+      <button class="filter-pill" data-filter="커리어">커리어</button>
+      <button class="filter-pill" data-filter="철학">철학</button>
     </div>
 
-    <div class="post-list">
-      <a class="post-row" href="posts/industry-turning-point.html">
+    <div class="post-list" id="postList">
+      <a class="post-row" href="posts/industry-turning-point.html" data-category="산업분석">
         <div>
           <p class="kicker">산업분석</p>
           <p class="title">무역데이터로 산업 전환점을 읽는 법</p>
@@ -52,7 +52,7 @@
         <p class="date">2026년 3월 13일 · 6분</p>
       </a>
 
-      <a class="post-row" href="posts/resilient-data-pipeline.html">
+      <a class="post-row" href="posts/resilient-data-pipeline.html" data-category="데이터">
         <div>
           <p class="kicker">데이터</p>
           <p class="title">소스가 바뀌어도 안 깨지는 데이터 설계</p>
@@ -61,7 +61,7 @@
         <p class="date">2025년 7월 14일 · 9분</p>
       </a>
 
-      <a class="post-row" href="posts/ai-research-mentalmodel.html">
+      <a class="post-row" href="posts/ai-research-mentalmodel.html" data-category="AI">
         <div>
           <p class="kicker">AI</p>
           <p class="title">초기 리서치를 위한 AI 활용 멘탈모델</p>
@@ -70,7 +70,7 @@
         <p class="date">2026년 2월 2일 · 13분</p>
       </a>
 
-      <a class="post-row" href="posts/policy-and-data.html">
+      <a class="post-row" href="posts/policy-and-data.html" data-category="정책연구">
         <div>
           <p class="kicker">정책연구</p>
           <p class="title">데이터가 정책 판단에 쓰이는 세 가지 방식</p>
@@ -79,7 +79,7 @@
         <p class="date">2025년 9월 29일 · 5분</p>
       </a>
 
-      <a class="post-row" href="posts/notes-on-being-a-researcher.html">
+      <a class="post-row" href="posts/notes-on-being-a-researcher.html" data-category="커리어">
         <div>
           <p class="kicker">커리어</p>
           <p class="title">연구자로 일하며 배운 것들</p>
@@ -88,7 +88,7 @@
         <p class="date">2025년 12월 15일 · 4분</p>
       </a>
 
-      <a class="post-row" href="posts/forecasting-anyway.html">
+      <a class="post-row" href="posts/forecasting-anyway.html" data-category="철학">
         <div>
           <p class="kicker">철학</p>
           <p class="title">예측이 틀릴 걸 알면서도 예측하는 이유</p>
@@ -97,6 +97,8 @@
         <p class="date">2026년 8월 1일 · 7분</p>
       </a>
     </div>
+
+    <p id="emptyState" style="display:none; color: var(--text-dark-soft); padding: 28px 0;">해당 카테고리의 글이 아직 없습니다.</p>
   </div>
 </section>
 
