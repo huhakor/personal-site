@@ -658,6 +658,8 @@ img { max-width: 100%; display: block; }
   font-size: 1.02rem;
   color: var(--text-dark);
   margin: 0 0 22px;
+  text-align: justify;
+  word-break: keep-all;
 }
 
 .article-body h2 {
