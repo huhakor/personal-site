@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소스가 바뀌어도 안 깨지는 데이터 설계 | 보민</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-logo">보민</a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../posts.html" class="active">글</a></li>
+      <li><a href="../notes.html">노트</a></li>
+      <li><a href="../about.html">소개</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <p class="kicker">데이터</p>
+    <h1>소스가 바뀌어도 안 깨지는 데이터 설계</h1>
+    <p class="meta">2025년 7월 14일 · 9분</p>
+  </div>
+</header>
+
+<article class="article-body">
+  <p>분석용 데이터 파이프라인은 대부분 처음 만들 때는 잘 작동한다. 문제는 반년, 일 년 뒤에 원천 데이터의 형식이 조용히 바뀔 때 일어난다. 열 이름이 바뀌거나, 코드 체계가 개정되거나, 라이브러리 버전이 올라가면서 예전에는 되던 처리 방식이 조용히 실패하기 시작한다. 이런 실패는 에러 메시지를 내뱉기보다, 결과값이 미묘하게 틀린 채로 통과되는 경우가 더 위험하다.</p>
+
+  <p>그래서 파이프라인을 설계할 때 가장 먼저 하는 일은 "이 소스가 바뀐다면 어디가 먼저 깨질까"를 목록으로 만드는 것이다. 분류 코드가 개정되는 시점, 환율 데이터의 기준이 바뀌는 시점, 원천 파일의 컬럼 순서가 달라지는 시점처럼 예측 가능한 변화는 아예 처리 로직 안에 대응표나 버전 분기로 흡수해둔다. 예측 불가능한 변화는 대신 중간 검증 단계를 넣어서, 값이 이상하면 파이프라인이 조용히 틀린 결과를 내보내는 대신 멈추도록 만든다.</p>
+
+  <p>의존성 관리도 비슷하다. 라이브러리 버전이 하나 바뀌었을 뿐인데 전체 처리가 막히는 경우를 몇 번 겪고 나서는, 버전을 최신으로 유지하는 것보다 "지금 작동하는 조합"을 명시적으로 고정해두는 쪽을 우선한다. 최신 버전이 항상 더 나은 것은 아니고, 실무에서는 어제 작동했던 파이프라인이 오늘도 작동하는 것이 더 중요할 때가 많다.</p>
+
+  <h2>안정성은 예외 처리가 아니라 설계에서 나온다</h2>
+  <p>결국 안정적인 데이터 파이프라인은 예외를 촘촘히 잡아내는 코드가 아니라, 무엇이 바뀔 수 있는지를 미리 알고 그 지점에 경계를 세워두는 설계에서 나온다. 데이터가 깨끗할 거라는 가정을 버리는 순간부터, 오히려 더 단순하고 읽기 쉬운 코드를 쓸 수 있게 된다.</p>
+</article>
+
+<div class="article-nav">
+  <a href="../posts.html">← 전체 글 목록</a>
+  <a href="ai-research-mentalmodel.html">다음 글: 초기 리서치를 위한 AI 활용 멘탈모델 →</a>
+</div>
+
+<section class="footer-cta">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <div>
+        <p class="brand">보민</p>
+        <p class="tag">데이터와 산업, 정책에 대해 씁니다.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </div>
+    <p class="copyright">© 2026 보민</p>
+  </div>
+</section>
+
+<script src="../script.js"></script>
+</body>
+</html>
