@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>노트 | 보민</title>
 <link rel="stylesheet" href="styles.css">
@@ -12,12 +13,14 @@
   <div class="wrap">
     <a href="index.html" class="nav-logo">보민</a>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html">홈</a></li>
-      <li><a href="posts.html">글</a></li>
-      <li><a href="notes.html" class="active">노트</a></li>
-      <li><a href="about.html">소개</a></li>
+      <li><a href="index.html" data-en="Home">홈</a></li>
+      <li><a href="posts.html" data-en="Posts">글</a></li>
+      <li><a href="notes.html" class="active" data-en="Notes">노트</a></li>
+      <li><a href="about.html" data-en="About">소개</a></li>
     </ul>
     <div class="nav-right">
+      <button class="icon-btn" id="langToggle" aria-label="언어 전환">EN</button>
+      <button class="icon-btn" id="themeToggle" aria-label="다크모드 전환">&#9789;</button>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
     </div>
   </div>
@@ -25,8 +28,8 @@
 
 <header class="page-header">
   <div class="wrap">
-    <h1>노트</h1>
-    <p>긴 글이 되기 전의 생각을 짧게 남깁니다.</p>
+    <h1 data-en="Notes">노트</h1>
+    <p data-en="Short thoughts, before they become long posts.">긴 글이 되기 전의 생각을 짧게 남깁니다.</p>
   </div>
 </header>
 
@@ -34,11 +37,11 @@
   <div class="wrap">
     <div class="notes-list">
       <div class="note-item">
-        <p class="note-meta"><span>산업분석</span><span class="date">2026년 8월 26일</span></p>
+        <p class="note-meta"><span data-en="Industry">산업분석</span><span class="date">2026년 8월 26일</span></p>
         <p class="note-text">품목 하나를 오래 들여다보면, 산업 전체를 넓게 보는 것보다 전환점을 더 빨리 알아챌 때가 많다. 좁고 깊게 보는 것이 넓고 얕게 보는 것보다 신호에 가깝다.</p>
       </div>
       <div class="note-item">
-        <p class="note-meta"><span>철학</span><span class="date">2026년 8월 21일</span></p>
+        <p class="note-meta"><span data-en="Philosophy">철학</span><span class="date">2026년 8월 21일</span></p>
         <p class="note-text">확신은 판단력의 증거가 아니다. 내가 틀렸을 때 그걸 얼마나 빨리 알아채고 고칠 수 있는가가 진짜 실력이라고 요즘 다시 생각한다.</p>
       </div>
       <div class="note-item">
@@ -46,11 +49,11 @@
         <p class="note-text">AI에게 정답을 구하지 않고 후보를 넓혀달라고 부탁하는 순간부터, 리서치 초기 단계가 눈에 띄게 빨라졌다.</p>
       </div>
       <div class="note-item">
-        <p class="note-meta"><span>정책연구</span><span class="date">2026년 8월 12일</span></p>
+        <p class="note-meta"><span data-en="Policy">정책연구</span><span class="date">2026년 8월 12일</span></p>
         <p class="note-text">빠른 경보와 엄밀한 인과 추론은 같은 지표로 동시에 만족시킬 수 없다. 지금 만드는 지표가 둘 중 무엇을 위한 것인지 먼저 정해야 한다.</p>
       </div>
       <div class="note-item">
-        <p class="note-meta"><span>데이터</span><span class="date">2026년 8월 5일</span></p>
+        <p class="note-meta"><span data-en="Data">데이터</span><span class="date">2026년 8월 5일</span></p>
         <p class="note-text">분류 코드가 개정될 때마다 대응표를 다시 만드는 작업은 지루하지만, 이걸 건너뛴 분석은 아무리 모델이 정교해도 출발점부터 틀린다.</p>
       </div>
     </div>
@@ -62,7 +65,7 @@
     <div class="footer-bottom">
       <div>
         <p class="brand">보민</p>
-        <p class="tag">데이터와 산업, 정책에 대해 씁니다.</p>
+        <p class="tag" data-en="Writing about data, industry, and policy.">데이터와 산업, 정책에 대해 씁니다.</p>
       </div>
       <ul class="footer-links">
         <li><a href="#">LinkedIn</a></li>

@@ -12,9 +12,21 @@
   --accent-soft: #e2b8a0;
   --border-soft: #ded5c1;
   --border-dark: #2b323d;
+  --surface: #ffffff;
   --radius: 14px;
   --max-width: 1040px;
   --font-sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg-cream: #17130f;
+  --bg-cream-2: #1d1811;
+  --text-dark: #f1ece2;
+  --text-dark-soft: #b6ab98;
+  --border-soft: #362e22;
+  --surface: #221c15;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -28,6 +40,7 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -100,6 +113,25 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-pill:hover { color: var(--text-light); border-color: var(--text-light-soft); }
+
+.icon-btn {
+  border: 1px solid var(--border-dark);
+  color: var(--text-light-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.icon-btn:hover { color: var(--text-light); border-color: var(--text-light-soft); }
 
 .nav-toggle {
   display: none;
@@ -276,7 +308,7 @@ img { max-width: 100%; display: block; }
 }
 
 .card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 26px;
@@ -327,7 +359,7 @@ img { max-width: 100%; display: block; }
 }
 
 .topic-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 28px;
@@ -420,7 +452,7 @@ img { max-width: 100%; display: block; }
 }
 
 .about-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 28px;
@@ -537,7 +569,7 @@ img { max-width: 100%; display: block; }
 
 .filter-pill {
   border: 1px solid var(--border-soft);
-  background: #fff;
+  background: var(--surface);
   color: var(--text-dark-soft);
   font-size: 0.85rem;
   padding: 7px 16px;

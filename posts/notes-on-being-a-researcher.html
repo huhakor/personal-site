@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>연구자로 일하며 배운 것들 | 보민</title>
 <link rel="stylesheet" href="../styles.css">
@@ -12,12 +13,14 @@
   <div class="wrap">
     <a href="../index.html" class="nav-logo">보민</a>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="../index.html">홈</a></li>
-      <li><a href="../posts.html" class="active">글</a></li>
-      <li><a href="../notes.html">노트</a></li>
-      <li><a href="../about.html">소개</a></li>
+      <li><a href="../index.html" data-en="Home">홈</a></li>
+      <li><a href="../posts.html" class="active" data-en="Posts">글</a></li>
+      <li><a href="../notes.html" data-en="Notes">노트</a></li>
+      <li><a href="../about.html" data-en="About">소개</a></li>
     </ul>
     <div class="nav-right">
+      <button class="icon-btn" id="langToggle" aria-label="언어 전환">EN</button>
+      <button class="icon-btn" id="themeToggle" aria-label="다크모드 전환">&#9789;</button>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
     </div>
   </div>
@@ -25,7 +28,7 @@
 
 <header class="article-header">
   <div class="wrap">
-    <p class="kicker">커리어</p>
+    <p class="kicker" data-en="Career">커리어</p>
     <h1>연구자로 일하며 배운 것들</h1>
     <p class="meta">2025년 12월 15일 · 4분</p>
   </div>
@@ -52,7 +55,7 @@
     <div class="footer-bottom">
       <div>
         <p class="brand">보민</p>
-        <p class="tag">데이터와 산업, 정책에 대해 씁니다.</p>
+        <p class="tag" data-en="Writing about data, industry, and policy.">데이터와 산업, 정책에 대해 씁니다.</p>
       </div>
       <ul class="footer-links">
         <li><a href="#">LinkedIn</a></li>

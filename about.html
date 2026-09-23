@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>소개 | 보민</title>
 <link rel="stylesheet" href="styles.css">
@@ -12,12 +13,14 @@
   <div class="wrap">
     <a href="index.html" class="nav-logo">보민</a>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html">홈</a></li>
-      <li><a href="posts.html">글</a></li>
-      <li><a href="notes.html">노트</a></li>
-      <li><a href="about.html" class="active">소개</a></li>
+      <li><a href="index.html" data-en="Home">홈</a></li>
+      <li><a href="posts.html" data-en="Posts">글</a></li>
+      <li><a href="notes.html" data-en="Notes">노트</a></li>
+      <li><a href="about.html" class="active" data-en="About">소개</a></li>
     </ul>
     <div class="nav-right">
+      <button class="icon-btn" id="langToggle" aria-label="언어 전환">EN</button>
+      <button class="icon-btn" id="themeToggle" aria-label="다크모드 전환">&#9789;</button>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
     </div>
   </div>
@@ -25,8 +28,8 @@
 
 <header class="page-header">
   <div class="wrap">
-    <h1>소개</h1>
-    <p>어떤 경험에서 나온 글인지.</p>
+    <h1 data-en="About">소개</h1>
+    <p data-en="What experience these posts come from.">어떤 경험에서 나온 글인지.</p>
   </div>
 </header>
 
@@ -35,29 +38,29 @@
     <div class="about-block">
       <div class="about-card">
         <p class="source">보민</p>
-        <p class="quote">
+        <p class="quote" data-en="1. I studied economics and industrial engineering together. Economics asks why a result happens; industrial engineering demands that the answer become a system that actually runs.<br><br>2. I've designed and run early-warning and demand-forecasting research using trade and industry data.<br><br>3. These days I'm thinking about how data can be reliably reflected in industry and policy judgment, and what good judgment even looks like under uncertainty.">
           1. 경제학과 산업공학을 함께 공부했습니다. 경제학이 왜 그런 결과가 나오는지 묻는다면, 산업공학은 그 답을 실제로 돌아가는 시스템으로 만들라고 요구했습니다.<br><br>
           2. 무역·산업 데이터를 다루며 조기경보와 수요예측 리서치를 설계하고 실행해왔습니다.<br><br>
           3. 요즘은 데이터가 산업과 정책의 판단에 어떻게 신뢰할 수 있게 반영될 수 있는지, 그리고 불확실성 앞에서 좋은 판단이란 무엇인지를 함께 고민하고 있습니다.
         </p>
-        <a href="posts/industry-turning-point.html" class="btn btn-outline" style="color:#1d1a15; border-color:#ded5c1;">대표 글 읽기 &#8599;</a>
+        <a href="posts/industry-turning-point.html" class="btn btn-outline" style="color:var(--text-dark); border-color:var(--border-soft);" data-en="Read the Flagship Post">대표 글 읽기 &#8599;</a>
       </div>
 
       <div>
-        <p class="section-label">배경</p>
-        <h2 class="section-title" style="margin-bottom:20px;">어떤 경험에서 나온 글인지</h2>
-        <p class="section-desc" style="margin-bottom:28px;">
+        <p class="section-label" data-en="Background">배경</p>
+        <h2 class="section-title" style="margin-bottom:20px;" data-en="What experience these posts come from">어떤 경험에서 나온 글인지</h2>
+        <p class="section-desc" style="margin-bottom:28px;" data-en="Written from problems I've run into directly in industry, data, and policy research — framing questions with economics, then turning them into working analysis and systems with industrial engineering.">
           산업, 데이터, 정책 리서치에서 직접 부딪힌 문제를 바탕으로 씁니다. 경제학으로 질문을 세우고, 산업공학으로 그 질문을 실제로 작동하는 분석과 시스템으로 옮기는 과정을 거치며 배운 것들을 기록합니다.
         </p>
 
         <div class="card" style="margin-bottom:16px;">
-          <h3>경력</h3>
-          <p>실제 이력을 채워 넣어보세요 — 어떤 조직에서, 어떤 프로젝트를 다뤘는지.</p>
-          <span class="placeholder-note">예시 — 실제 경력으로 교체하세요</span>
+          <h3 data-en="Career">경력</h3>
+          <p data-en="Fill in real experience here — which organizations, which projects.">실제 이력을 채워 넣어보세요 — 어떤 조직에서, 어떤 프로젝트를 다뤘는지.</p>
+          <span class="placeholder-note" data-en="Placeholder — replace with real career details">예시 — 실제 경력으로 교체하세요</span>
         </div>
         <div class="card">
-          <h3>관심 주제</h3>
-          <p>무역·산업 데이터, 정책 리서치, AI를 활용한 분석, 데이터 파이프라인 설계, 판단과 불확실성에 대한 철학적 질문</p>
+          <h3 data-en="Interests">관심 주제</h3>
+          <p data-en="Trade &amp; industry data, policy research, AI-assisted analysis, data pipeline design, and philosophical questions about judgment and uncertainty">무역·산업 데이터, 정책 리서치, AI를 활용한 분석, 데이터 파이프라인 설계, 판단과 불확실성에 대한 철학적 질문</p>
         </div>
       </div>
     </div>
@@ -66,8 +69,8 @@
 
 <section class="footer-cta">
   <div class="wrap">
-    <h2>이야기할 일이 있다면</h2>
-    <p>LinkedIn이나 GitHub으로 편하게 연락해 주세요.</p>
+    <h2 data-en="Let's talk">이야기할 일이 있다면</h2>
+    <p data-en="Feel free to reach out on LinkedIn or GitHub.">LinkedIn이나 GitHub으로 편하게 연락해 주세요.</p>
     <div class="footer-actions">
       <a href="#" class="btn btn-accent">LinkedIn</a>
       <a href="#" class="btn btn-outline">GitHub</a>
@@ -75,7 +78,7 @@
     <div class="footer-bottom">
       <div>
         <p class="brand">보민</p>
-        <p class="tag">데이터와 산업, 정책에 대해 씁니다.</p>
+        <p class="tag" data-en="Writing about data, industry, and policy.">데이터와 산업, 정책에 대해 씁니다.</p>
       </div>
       <ul class="footer-links">
         <li><a href="#">LinkedIn</a></li>
