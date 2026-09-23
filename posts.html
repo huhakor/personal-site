@@ -19,12 +19,20 @@
       <li><a href="about.html" data-en="About">소개</a></li>
     </ul>
     <div class="nav-right">
+      <button class="icon-btn" id="searchToggle" aria-label="검색">&#128269;</button>
       <button class="icon-btn" id="langToggle" aria-label="언어 전환">EN</button>
       <button class="icon-btn" id="themeToggle" aria-label="다크모드 전환">&#9789;</button>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
     </div>
   </div>
 </nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" class="search-input" placeholder="글 제목, 키워드로 검색..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
 
 <header class="page-header">
   <div class="wrap">
@@ -121,6 +129,8 @@
   </div>
 </section>
 
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
