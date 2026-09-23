@@ -149,7 +149,10 @@ img { max-width: 100%; display: block; }
    any future images inherit it automatically via the filter, and
    position:fixed elements outside this subtree stay unaffected. */
 html[data-grayscale="true"] body > *:not(.search-overlay) {
-  filter: grayscale(1);
+  /* Plain grayscale(1) barely changes the cream/off-white tokens since
+     they're already low-saturation; contrast + brightness push light
+     backgrounds to a visibly neutral gray instead of staying beige-ish. */
+  filter: grayscale(1) contrast(1.5) brightness(0.9);
 }
 
 .nav-toggle {
@@ -285,6 +288,7 @@ html[data-grayscale="true"] body > *:not(.search-overlay) {
 /* ===== Section ===== */
 .section {
   padding: 88px 0;
+  background: var(--bg-cream);
 }
 
 .section-alt {
@@ -671,6 +675,7 @@ html[data-grayscale="true"] body > *:not(.search-overlay) {
   max-width: 720px;
   margin: 0 auto;
   padding: 56px 24px 40px;
+  background: var(--bg-cream);
 }
 
 .article-body p {
@@ -694,6 +699,7 @@ html[data-grayscale="true"] body > *:not(.search-overlay) {
   justify-content: space-between;
   border-top: 1px solid var(--border-soft);
   padding-top: 24px;
+  background: var(--bg-cream);
 }
 
 .article-nav a {
