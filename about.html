@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('grayscale')==='true'){document.documentElement.setAttribute('data-grayscale','true');}}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>소개 | 보민</title>
 <link rel="stylesheet" href="styles.css">
@@ -22,6 +22,7 @@
       <button class="icon-btn" id="searchToggle" aria-label="검색">&#128269;</button>
       <button class="icon-btn" id="langToggle" aria-label="언어 전환">EN</button>
       <button class="icon-btn" id="themeToggle" aria-label="다크모드 전환">&#9789;</button>
+      <button class="icon-btn" id="grayscaleToggle" aria-label="흑백 모드">B/W</button>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">&#9776;</button>
     </div>
   </div>

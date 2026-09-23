@@ -58,6 +58,18 @@
       });
     }
 
+    var grayscaleToggle = document.getElementById("grayscaleToggle");
+    if (grayscaleToggle) {
+      grayscaleToggle.classList.toggle("active", document.documentElement.getAttribute("data-grayscale") === "true");
+      grayscaleToggle.addEventListener("click", function () {
+        var isOn = document.documentElement.getAttribute("data-grayscale") === "true";
+        var next = isOn ? "false" : "true";
+        document.documentElement.setAttribute("data-grayscale", next);
+        grayscaleToggle.classList.toggle("active", next === "true");
+        try { localStorage.setItem("grayscale", next); } catch (e) {}
+      });
+    }
+
     var savedLang = "ko";
     try { savedLang = localStorage.getItem("lang") || "ko"; } catch (e) {}
     applyLanguage(savedLang);

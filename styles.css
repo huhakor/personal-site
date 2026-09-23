@@ -133,6 +133,25 @@ img { max-width: 100%; display: block; }
 
 .icon-btn:hover { color: var(--text-light); border-color: var(--text-light-soft); }
 
+.icon-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff8f2;
+}
+
+.icon-btn.active:hover {
+  color: #fff8f2;
+  border-color: var(--accent);
+}
+
+/* ===== Grayscale mode ===== */
+/* Applied to body's direct children (not the search overlay) so
+   any future images inherit it automatically via the filter, and
+   position:fixed elements outside this subtree stay unaffected. */
+html[data-grayscale="true"] body > *:not(.search-overlay) {
+  filter: grayscale(1);
+}
+
 .nav-toggle {
   display: none;
   background: none;
